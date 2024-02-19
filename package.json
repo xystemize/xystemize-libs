@@ -20,6 +20,7 @@
     "@nx/eslint-plugin": "17.0.3",
     "@nx/jest": "17.0.3",
     "@nx/js": "17.0.3",
+    "@nx/plugin": "17.0.3",
     "@nx/react-native": "17.0.3",
     "@nx/workspace": "17.0.3",
     "@react-native-community/cli": "11.3.6",
