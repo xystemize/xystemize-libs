@@ -1,5 +1,5 @@
 {
-  "name": "@xystemize-libs/app-core-plugin",
+  "name": "@xystemize/app-core-plugin",
   "version": "0.0.2",
   "dependencies": {
     "@nx/devkit": "17.0.3",
