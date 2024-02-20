@@ -42,7 +42,8 @@
       "options": {
         "lintFilePatterns": [
           "libs/app-core-plugin/**/*.ts",
-          "libs/app-core-plugin/package.json"
+          "libs/app-core-plugin/package.json",
+          "libs/app-core-plugin/generators.json"
         ]
       }
     },
