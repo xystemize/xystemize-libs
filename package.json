@@ -1,6 +1,6 @@
 {
   "name": "@xystemize-libs/source",
-  "scopeName": "@xystemize-libs",
+  "scopeName": "@xystemize",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
