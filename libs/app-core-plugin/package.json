@@ -1,6 +1,6 @@
 {
   "name": "@xystemize-libs/app-core-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "@nx/devkit": "17.0.3",
     "tslib": "^2.3.0"
