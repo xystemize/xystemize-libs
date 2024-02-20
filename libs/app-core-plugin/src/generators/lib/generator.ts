@@ -1,5 +1,4 @@
 import {
-  addProjectConfiguration,
   formatFiles,
   generateFiles,
   installPackagesTask,
@@ -11,13 +10,19 @@ import { LibGeneratorSchema } from './schema';
 import { libraryGenerator } from '@nx/js';
 
 export async function libGenerator(tree: Tree, options: LibGeneratorSchema) {
+  const { name, directory } = options;
   const resolvedOptions = {
     ...options,
-    name: names(options.name).fileName,
+    name: names(name).fileName,
   };
-  const projectRoot = `libs/${options.name}`;
-  
-  await libraryGenerator(tree, { name: resolvedOptions.name });
+
+  let projectRoot = `libs/${name}`;
+
+  if (directory) {
+    projectRoot = `libs/${directory}/${name}`;
+  }
+
+  await libraryGenerator(tree, resolvedOptions);
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, resolvedOptions);
   await formatFiles(tree);
 
