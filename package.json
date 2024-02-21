@@ -87,8 +87,8 @@
     "verdaccio": "^5.0.4"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,ts,tsx}": "eslint --cache --fix",
+    "*.{js,ts,tsx,css,md}": "prettier --write"
   },
   "nx": {
     "includedScripts": []
