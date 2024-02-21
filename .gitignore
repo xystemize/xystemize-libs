@@ -111,3 +111,34 @@ yarn-error.log
 
 
 apps/mobile-example-e2e/artifacts
+
+# root
+.eslintcache
+tsconfig.tsbuildinfo
+.npmrc
+dev.config.json
+.next
+
+# Firebase
+firebase-debug.log
+.firebase
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+
+## backend
+apps/backend/package.json
+apps/backend/package-lock.json
+.env.production
+
+## web
+apps/web/.env.local
+
+## marketing
+apps/marketing/.env.local
+
+## ios
+**/ios/tmp.xcconfig
+
+## project
+.nx

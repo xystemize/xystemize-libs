@@ -1,4 +1,4 @@
-import { device, element, by, expect } from 'detox';
+import { by, device, element, expect } from 'detox';
 
 describe('MobileExample', () => {
   beforeEach(async () => {
@@ -6,8 +6,6 @@ describe('MobileExample', () => {
   });
 
   it('should display welcome message', async () => {
-    await expect(element(by.id('heading'))).toHaveText(
-      'Welcome MobileExample 👋'
-    );
+    await expect(element(by.id('heading'))).toHaveText('Welcome MobileExample 👋');
   });
 });

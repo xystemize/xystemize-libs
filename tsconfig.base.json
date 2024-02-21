@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@xystemize-libs/app-core-plugin": ["libs/app-core-plugin/src/index.ts"],
-      "@xystemize/app-core-model": ["libs/app-core-model/src/index.ts"]
+      "@xystemize/app-core": ["libs/app-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
