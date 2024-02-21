@@ -2,7 +2,7 @@ import { formatFiles, generateFiles, installPackagesTask, names, readJson, Tree 
 import { libraryGenerator } from '@nx/js';
 import * as path from 'path';
 
-import { appendJsonFile } from '../utils/File';
+import { appendNxGeneratedJsonFile } from '../../AppUtility/GeneratorUtility';
 
 import { LibGeneratorSchema } from './schema';
 
@@ -28,7 +28,7 @@ export async function libGenerator(tree: Tree, options: LibGeneratorSchema) {
   await libraryGenerator(tree, resolvedOptions);
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, resolvedOptions);
 
-  appendJsonFile({
+  appendNxGeneratedJsonFile({
     tree,
     filePath: `${libName}/package.json`,
     fileContent: {
@@ -38,7 +38,7 @@ export async function libGenerator(tree: Tree, options: LibGeneratorSchema) {
     },
   });
 
-  appendJsonFile({
+  appendNxGeneratedJsonFile({
     tree,
     filePath: `${libName}/project.json`,
     fileContent: {
