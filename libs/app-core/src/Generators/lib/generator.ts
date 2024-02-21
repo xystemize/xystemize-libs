@@ -1,15 +1,10 @@
-import {
-  formatFiles,
-  generateFiles,
-  installPackagesTask,
-  names,
-  readJson,
-  Tree,
-} from '@nx/devkit';
-import * as path from 'path';
-import { LibGeneratorSchema } from './schema';
+import { formatFiles, generateFiles, installPackagesTask, names, readJson, Tree } from '@nx/devkit';
 import { libraryGenerator } from '@nx/js';
+import * as path from 'path';
+
 import { appendJsonFile } from '../utils/File';
+
+import { LibGeneratorSchema } from './schema';
 
 export async function libGenerator(tree: Tree, options: LibGeneratorSchema) {
   const { name, directory } = options;
@@ -33,20 +28,28 @@ export async function libGenerator(tree: Tree, options: LibGeneratorSchema) {
   await libraryGenerator(tree, resolvedOptions);
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, resolvedOptions);
 
-  appendJsonFile({ tree, filePath: `${libName}/package.json`, fileContent: {
-    publishConfig: {
-      access: "public"
-    }
-  }});
+  appendJsonFile({
+    tree,
+    filePath: `${libName}/package.json`,
+    fileContent: {
+      publishConfig: {
+        access: 'public',
+      },
+    },
+  });
 
-  appendJsonFile({ tree, filePath: `${libName}/project.json`, fileContent: {
-    release: {
-      executor: "nx-release:build-update-publish",
-      options: {
-        libName: "app-core"
-      }
-    }
-  }});
+  appendJsonFile({
+    tree,
+    filePath: `${libName}/project.json`,
+    fileContent: {
+      release: {
+        executor: 'nx-release:build-update-publish',
+        options: {
+          libName: 'app-core',
+        },
+      },
+    },
+  });
 
   await formatFiles(tree);
 

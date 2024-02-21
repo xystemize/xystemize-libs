@@ -22,11 +22,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/app-core/**/*.ts",
-          "libs/app-core/package.json",
-          "libs/app-core/generators.json"
-        ]
+        "lintFilePatterns": ["libs/app-core/**/*.ts", "libs/app-core/package.json", "libs/app-core/generators.json"]
       }
     },
     "test": {

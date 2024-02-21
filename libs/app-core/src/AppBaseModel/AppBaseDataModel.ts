@@ -38,7 +38,7 @@ export class AppBaseDataModel extends AppBaseModel {
   updateByAdmin<Type extends this>(instance: Type) {
     const sanitizedObj = omitBy(
       instance,
-      (value, key) => !this.updatePropsByAdmin.includes(key) || value === undefined,
+      (value, key) => !this.updatePropsByAdmin.includes(key) || value === undefined
     );
 
     return Object.assign(this, sanitizedObj);
