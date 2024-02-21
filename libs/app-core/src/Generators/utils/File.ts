@@ -1,6 +1,5 @@
 import {
-    Tree,
-} from '@nx/devkit';
+    Tree} from '@nx/devkit';
 
 export const readJsonFile = ({ tree, filePath }: { tree: Tree, filePath: string; }) => {
     return JSON.parse(tree.read(filePath).toString('utf8'));
