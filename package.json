@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "nxLintAndFix": "npx nx run-many --all --skip-nx-cache --parallel --targets=lint,type-check --fix"
+    "nxLintAndFix": "npx nx run-many --all --skip-nx-cache --parallel --targets=lint,type-check --fix",
+    "nxReleaseSetup": "npx nx generate nx-release:configure"
   },
   "private": true,
   "dependencies": {
